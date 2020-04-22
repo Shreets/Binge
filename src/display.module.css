@@ -1,0 +1,81 @@
+.display_box {
+  height: 50vh;
+  width: 55vw;
+  float: right;
+  background: lightgray;
+  box-sizing: border-box;
+  margin: 40px;
+  margin-right: 0px;
+  padding: 25px;
+  border: 15px ridge;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.title {
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.display_img {
+  float: left;
+  margin-right: 20px;
+}
+
+.display_info {
+  height: 38vh;
+  width: 65vh;
+  float: left;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+}
+
+.final {
+  font-weight: bold;
+  color: red;
+}
+/* (min-device-width: 975px) and */
+
+@media (max-device-width: 956px) {
+  .display_box {
+    height: 55vh;
+    width: 55vw;
+    float: right;
+    background: lightgray;
+    box-sizing: border-box;
+    margin: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 25px;
+    border: 15px ridge;
+    align-items: center;
+    overflow: auto;
+  }
+  .display_info {
+    height: 42vh;
+    width: 65vh;
+    float: left;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 1274px) {
+  .display_box {
+    height: 35vh;
+    width: 60%;
+    float: none;
+    background: lightgray;
+    box-sizing: border-box;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 8px ridge;
+    overflow-y: scroll;
+  }
+}
