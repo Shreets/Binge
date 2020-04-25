@@ -39,7 +39,13 @@ const Display = (props) => {
         </p>
         <p>
           <span className={style.span}>Official Site </span>:{" "}
-          <a href={props.movies.officialSite}>{props.movies.officialSite}</a>
+          <a href={props.movies.officialSite}>
+            {props.movies.officialSite === null ? (
+              <em>Not Available</em>
+            ) : (
+              props.movies.officialSite
+            )}
+          </a>
         </p>
       </div>
     </div>

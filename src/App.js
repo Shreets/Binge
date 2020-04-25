@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Display from "./display";
 import Search from "./search";
+import Popup from "./popup";
 import background from "./bg.jpg";
 
 const App = () => {
   let declaration = " ";
+
   const [movie, setMovie] = useState({});
   const [disagree, setDisagree] = useState(true);
   const [text, setText] = useState(declaration);
   const [selectMovie, setSelectMovie] = useState([]);
+  const [popup, setPopup] = useState(true);
 
   const finalselection = selectMovie.lastIndexOf();
 
@@ -24,8 +27,6 @@ const App = () => {
     // console.log(selectMovie, data[random]);
     setSelectMovie(MovieSelection);
   };
-
-  // console.log(selectMovie)
 
   useEffect(() => {
     if (!disagree) {
@@ -48,17 +49,33 @@ const App = () => {
     setDisagree(false);
     setText("Great! You Have decided to watch : ");
   };
-  console.log(selectMovie);
+
+  const popupClick = () => {
+    setPopup(false);
+  };
+
+  const Component = (props) => {
+    const dialog = props.popup;
+    if (dialog) {
+      return <Popup onclick={popupClick} popups={popup} />;
+    }
+    return (
+      <>
+        <Display movies={movie} text={text} />
+        <Search
+          movies={movie}
+          onclick={unlike}
+          final={likeClick}
+          selectMovie={selectMovie}
+          disagree={disagree}
+        />
+      </>
+    );
+  };
+
   return (
     <div className="container">
-      <Display movies={movie} text={text} />
-      <Search
-        movies={movie}
-        onclick={unlike}
-        final={likeClick}
-        selectMovie={selectMovie}
-        disagree={disagree}
-      />
+      <Component popup={popup} />
     </div>
   );
 };
