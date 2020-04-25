@@ -1,6 +1,6 @@
-.container {
+.container_pop {
   margin: auto;
-  height: 40%;
+  height: 80%;
   width: 40%;
   background-color: white;
   border: 5px ridge grey;
@@ -10,14 +10,30 @@
   word-spacing: 1.5px;
 }
 
-.button {
-  margin: 10px 35px 0px 35px;
-  height: 30px;
-  width: 50px;
-  font-size: 10px;
-  border-radius: 20px;
-  box-shadow: 0px 5px 20px rgb(71, 71, 71);
-  outline: none;
-  margin: auto;
-  margin-top: 20px;
+@media (max-device-width: 700px) {
+  .container_pop {
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    font-size: 25px;
+    background-color: white;
+    border: 5px ridge grey;
+    padding: 20px;
+    /* text-align: center; */
+    line-height: 1.5;
+    word-spacing: 1.5px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+  }
+  .button {
+    margin: auto;
+    height: 40px;
+    width: 80px;
+    font-size: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgb(71, 71, 71);
+    outline: none;
+    margin: auto;
+    margin-top: 10px;
+  }
 }
