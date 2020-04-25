@@ -5,18 +5,17 @@
   min-width: 90vh;
   padding-top: 20px;
   background-image: url("./bg.jpg");
-  background-size: cover;
 
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./bg.jpg") no-repeat; */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 955px) {
   .container {
-    height: 2000%;
-    width: 100%;
+    min-height: 100vh;
+    min-width: 100%;
     background-image: url("./bg.jpg");
-    background-size: cover;
-    background-repeat: repeat;
+    background-size: 100%;
+    background-position: 100% 100% 100%;
   }
 }
